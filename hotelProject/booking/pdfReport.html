@@ -1,0 +1,89 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <style>
+        .table,td
+        {
+            border:1px solid red;
+        }
+        td,th
+        {
+            text-align:center;
+            padding-top:3px;
+        }
+        @font-face {
+            font-family: "code2000";
+            src: url("/fonts/CODE2000.TTF")
+        }
+
+        html {
+                    font-family: code2000;
+            }
+    </style>
+    <title>Show Info</title>
+  </head>
+  <body>
+    <h1>Show Info From Das360</h1>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">booking_status</th>
+                        <th scope="col">customer</th>
+                        <th scope="col">booking_date</th>
+                        <th scope="col">checking_date</th>
+<!-- <img class="rounded-circle" src="{{userdata.avatar.url}}" alt="User Avatar" width="110">-->
+                      </tr>
+                    </thead>
+                    <tbody>
+
+                     {% for data in datatoshow %}
+
+                        <tr>
+                            <td >{{ data.id }}</td>
+
+<!--                            {% with firstname="/static" %}-->
+<!--                            <td class="m-2"> <img height="80px" width="50px" src="{{room.image.url}}" alt="User Avatar"/></td>-->
+<!--                            <td class="m-2"> <img src="{{ firstname }}{{ room.image.url }}" style="height: 300px; width: 200px;"  class="card-img-top" alt="..."></td>-->
+<!--                            {{ firstname }}{{ room.image.url }}-->
+
+                            <td ><b>{{ data.customer }}</b></td>
+                            <td>{{ data.booking_date }}</td>
+                            <td style="color: blueviolet; margin: 5px;">{{ data.checking_date }}</td>
+<!--                            <td>{{ room.is_published }}</td>-->
+<!--                            <td>{{ room.created_at }}</td>-->
+
+<!--<td><img src="{{hostname}}{{data.cover_image.url}}" alt="room image" ></td>-->
+<!--                            <td><img class="rounded-circle" src="{{room.room_image.url}}" alt="room image" width="110"></td>-->
+                        </tr>
+<!--{% endwith %}-->
+                      {% endfor %}
+
+                    </tbody>
+                  </table>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  </body>
+</html>
