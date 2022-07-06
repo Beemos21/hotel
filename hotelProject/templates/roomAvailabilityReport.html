@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <title> Room Availability Report </title>
+    </head>
+
+    <body>
+
+        <table border="5px solid black" align="center" style="width:80%" cellspacing="5px">
+            <thead>
+            <tr style="height:100px">
+
+                <th colspan="1" align= center> <img src="hotelLogo.png" alt="logo" width="50 px" height="50px"></th>
+                <th colspan="2" align= center> Hotel Room Availability Report, from Jan, 01 2001 to Jan, 02 2001 </th>
+
+            </tr>
+
+            <tr align= center style="height:50px">
+                <th> Room type </th>
+                <th> Reserved </th>
+                <th> Available </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr align= center>
+                <td> Classic </td>
+                <td> {{ countR }} </td>
+                <td> {{ countA }} </td>
+            </tr>
+
+            <tr align= center>
+                <td> Luxury </td>
+                <td> 10 </td>
+                <td> 10 </td>
+            </tr>
+
+            <tr align= center>
+                <td> Total </td>
+                <td> 35 </td>
+                <td> 35 </td>
+
+            </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
